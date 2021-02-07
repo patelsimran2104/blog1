@@ -1,0 +1,11 @@
+<h1>forms</h1>
+
+<ul>
+<% @informations.each do |information|%>
+    <li>
+      <%= link_to information.fullname, information %>
+    </li>
+<% end %>
+</ul>
+
+<%= link_to "new_information", new_information_path%>

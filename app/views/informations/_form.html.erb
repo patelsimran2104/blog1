@@ -1,0 +1,30 @@
+<%= form_with model: information do |form| %>
+    <div>
+      <%= form.label :fullname %><br>
+      <%= form.text_field :fullname %>
+    </div>
+  
+    <div>
+      <%= form.label :address %><br>
+      <%= form.text_area :address %><br>
+    
+    </div>
+    <h1> professional </h1>
+    <div>
+      <%= form.label :role %><br>
+      <%= form.text_field :role %>
+    
+    </div>
+  
+    <div>
+      <%= form.label :gender %><br>
+      <%= form.text_area :gender %><br>
+    
+    </div>
+  
+    <div>
+      <%= form.submit %>
+    </div>
+
+    
+<% end %>

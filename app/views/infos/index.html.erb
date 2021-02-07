@@ -1,0 +1,12 @@
+<h1>Forms</h1>
+
+<ul>
+  <% @infos.each do |info|%>
+		<li>
+    <%= link_to info.fullname, info %>
+    </a>
+		</li>
+	<% end%>
+</ul>
+
+<%= link_to "new_info", new_info_path%>

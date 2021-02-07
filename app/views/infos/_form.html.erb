@@ -1,0 +1,125 @@
+<%= form_with model: info do |form| %>
+    <div>
+    <br>
+      <%= form.label :fullname %><br>
+      <%= form.text_field :fullname %>
+      <% info.errors.full_messages_for(:fullname).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  
+    <div>
+    <br>
+      <%= form.label :address %><br>
+      <%= form.text_area :address %><br>
+      <% info.errors.full_messages_for(:address).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+    
+    <div>
+    </br>
+    <%= form.radio_button :gender, "Female" %>
+    <%= form.label :female %>
+    <%= form.radio_button :gender, "Male" %>
+    <%= form.label :male %>
+    <%= form.radio_button :gender, "Other" %>
+    <%= form.label :other %>
+    <% info.errors.full_messages_for(:gender).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+    </div>
+
+    <div>
+    <br>
+      <%= form.label :date_of_birth %><br>
+      <%= form.date_field :dob %>
+      <% info.errors.full_messages_for(:dob).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+    <br>
+      <%= form.label :Personal_Phone_Number %><br>
+      <%= form.telephone_field :personalphoneNo %>
+      <% info.errors.full_messages_for(:personalphoneNo).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+    <br>
+      <%= form.label :personalemail %><br>
+      <%= form.text_field :personalemail %>
+      <% info.errors.full_messages_for(:personalemail).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+    <br>
+    <%= form.label :Interest %><br>
+    <%= form.text_area :hobby %>
+    <% info.errors.full_messages_for(:hobby).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+    </div>
+
+    
+    <h1> professional </h1>
+    <div>
+    <br>
+      <%= form.label :role %><br>
+      <%= form.text_field :role %>
+      <% info.errors.full_messages_for(:role).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>    
+
+    <div>
+    <br>
+      <%= form.label :worklocation %><br>
+      <%= form.text_area :worklocation %>
+      <% info.errors.full_messages_for(:worklocation).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+    <br>
+      <%= form.label :professionalemail %><br>
+      <%= form.text_field :professionalemail %>
+      <% info.errors.full_messages_for(:worklocation).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+    <br>
+      <%= form.label :Professional_Phone_Number %><br>
+      
+      <%= form.telephone_field :professionalphoneNo %>
+      <% info.errors.full_messages_for(:professionalphoneNo).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+    <br>
+      <%= form.label :SocialMedia_link%><br>
+      <%= form.url_field :socialId %>
+      <% info.errors.full_messages_for(:socialId).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+  
+    <div>
+    <br>
+      <%= form.submit %>
+    </div>
+
+    
+    
+<% end %>

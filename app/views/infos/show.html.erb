@@ -1,0 +1,95 @@
+<p><% @info.age = Date.today.year - @info.dob.year %> </p>
+
+<%= form_with model: @info do |form| %>
+
+  <h1> Personal Info</h1>
+  <div>
+  <br><%= form.label :fullname %><br>
+    <%= form.text_field :fullname, :readonly => true %><br>
+  </div>
+
+  <div>
+  <br><%= form.label :address %><br>
+    <%= form.text_area :address, :readonly => true %><br>
+  </div>  
+
+  <div>
+  <br><%= form.radio_button :gender, "Female", :disable => true %>
+  <%= form.label :female %>
+  <%= form.radio_button :gender, "Male", :disable => true %>
+  <%= form.label :male %>
+  <%= form.radio_button :gender, "Other", :disable => true %>
+  <%= form.label :other %><br>
+  </div>
+
+  <div>
+  <br>
+    <%= form.label :date_of_birth %><br>
+    <%= form.date_field :dob, :readonly => true %><br>
+  </div>
+
+  <div>
+  <br>
+  <%= form.label :Age %><br>
+  <%= form.text_field :age, :readonly => true%><br>
+  </div>
+
+  <div>
+  <br>
+    <%= form.label :Personal_Phone_Number %><br>
+    <%= form.telephone_field :personalphoneNo, :readonly => true %><br> 
+  </div>
+
+  <div>
+  <br>
+    <%= form.label :personalemail %><br>
+    <%= form.email_field :personalemail, :readonly => true %><br> 
+  </div>
+
+  <div>
+  <br>
+  <%= form.label :Interest %><br>
+  <%= form.text_area :hobby, :readonly => true %><br>
+  </div>
+
+  
+  <h1> Professional Info </h1>
+  <div>
+  <br>
+    <%= form.label :role %><br>
+    <%= form.text_field :role, :readonly => true %><br>
+  </div>    
+
+  <div>
+  <br>
+    <%= form.label :worklocation %><br>
+    <%= form.text_area :worklocation, :readonly => true %><br>
+  </div>
+
+  <div>
+  <br>
+    <%= form.label :professionalemail %><br>
+    <%= form.email_field :professionalemail, :readonly => true %><br>
+  </div>
+
+  <div>
+  <br>
+    <%= form.label :Professional_Phone_Number %><br>
+    <%= form.telephone_field :professionalphoneNo, :readonly => true %><br>
+  </div>
+
+  <div>
+  <br>
+    <%= form.label :SocialMedia_link%><br>
+    <%= form.url_field :socialId, :readonly => true %><br>
+  </div>
+     
+<% end %>
+
+<ul>
+  <li><%=  link_to "Edit", edit_info_path(@info) %></li>
+  <li><%= link_to "Destroy", info_path(@info),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+  <li><%= link_to "Home", root_path %></li>
+</ul>

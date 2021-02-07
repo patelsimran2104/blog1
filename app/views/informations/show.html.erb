@@ -1,0 +1,10 @@
+<h1><%= @information.fullname %></h1>
+
+<p><%= @information.address %></p>
+
+<ul>
+  <li><%=  link_to "Edit", edit_information_path(@information) %></li>
+  <li><%= link_to "Destroy", information_path(@information),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+</ul>
